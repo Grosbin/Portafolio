@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== Box Icons ==========-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--========== Css ==========-->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <!-- Logo pestaña -->
+        <link rel="shortcut icon" href="../static/img/saturno.svg" type="image/x-icon">
+        <title>Grosbin</title>
+    </head>
+    <body>
+
+        <!--========== Scroll Superior ==========-->
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-rocket bx-rotate-270  scrolltop__icon' ></i>
+         
+        </a>
+
+        {% block content %} 
+        {% endblock %}
+
+        <!--========== Desplazamiento ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== Main Js ==========-->
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
