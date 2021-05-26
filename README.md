@@ -10,4 +10,6 @@ Utilozo boxicons para algunos iconos
 
 El perfil y ventana esta hecho en illustrator con photoshop
 
+Utilizo ScrollReveal
+
 
