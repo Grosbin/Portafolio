@@ -2,7 +2,7 @@
 
 ##### En linux si permite clonar en la rama master, en windows creo que tiene que bajar el zip
 
-*Este portafolio esta hecho con Django*
+* -Este portafolio esta hecho con Django*
 
 Para el nombre de las carpetas utilizo la convencion lower camelCase
 
