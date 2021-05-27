@@ -12,6 +12,6 @@
 
 * El perfil y ventana esta hecho en illustrator con photoshop
 
-* Utilizo ScrollReveal*
+* Utilizo ScrollReveal
 
 
