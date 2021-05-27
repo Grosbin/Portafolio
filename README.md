@@ -1,12 +1,2 @@
-# Portafolio
-
-Este portafolio esta hecho con Django
-
-Para el nombre de las carpetas utilizo la convencion lower camelCase
-
-Para le nombre de las variable utilizo la convencion
-
-Utilozo boxicons para lagunos iconos
-
-Utilizo ScrollReveal para las animaciones
+# Tiene que bajarlo de la rama master :)
 
