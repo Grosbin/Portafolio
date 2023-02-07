@@ -1,0 +1,278 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block headScript %}
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="{% static 'js/lottie-player.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+        <!--========== Header ==========-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+
+                <button class="switch" id="switch">
+                    <div class="switch__icono">
+                        <i class='bx bxs-moon bx-tada-hover' id="icono__luna"></i>
+                        <i class='bx bxs-sun bx-tada-hover' id="icono__sol"></i>
+                    </div>
+                </button>
+
+                <!-- <button class="switch" id="switch">
+                    <span><i class='bx bxs-sun bx-tada-hover' id="icono__sol"></i></span>
+                    <span><i class='bx bxs-moon bx-tada-hover' id="icono__luna"></i></span>
+               </button> -->
+                <!-- <a href="#" class="nav__logo" id='theme-button'><i class='bx bx-adjust bx-tada-hover' ></i> Grosbin</a> -->
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#inicio" class="nav__link active-link">Inicio</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">Sobre mi</a></li>
+                        <li class="nav__item"><a href="#habilidades" class="nav__link">Habilidades</a></li>
+                        <li class="nav__item"><a href="#conocimientos" class="nav__link">Conocimientos</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>   
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Ventana modal -->
+            <div class="modal-container">
+                <div class="modal modal-close">
+                    <a class="close button-form">Salir <i class='bx bxs-meteor bx-tada-hover' ></i></a>
+                    <h2 class="form__titulo">Contacto</h2>
+                    <div class="form__exito" id="form__exito">
+                        <p><i class='bx bxs-check-circle bx-tada' id="icono__exito" ></i> Mensaje enviado exitosamente</p>
+                    </div>
+	                <form class="formulario" id="formulario" action="{% url 'index' %}" method="POST">
+		            {% csrf_token %}
+		<!-- nombre -->
+		                <div class="form__group " id="form__nombre">
+			                <div class="form__group__input">
+				            <input type="text" name="nombre" class="caja-text" placeholder="Nombre">
+				            <!-- <i class='form__validate bx '></i>  -->
+				            <p class="form__error">No se permite caracteres especiales<br>No se permite números</p>
+		    	            </div>
+		                </div>
+		<!-- correo -->
+		                <div class="form__group" id="form__correo">
+		                	<div class="form__group__input">
+		            		<input type="email" name="correo" class="caja-text" placeholder="Correo">
+		            		<!-- <i class='form__validate bx '></i> -->
+		            		<p class="form__error">El correo debe ser válido</p>
+		                	</div>
+		                </div>
+		<!-- mensaje -->
+		                <div class="form__group" id="form__mensaje">
+		                	<div class="form__group__input">
+		            		<textarea class="caja-text" id="mensaje" name="mensaje" placeholder="Mensaje" maxlength="300"></textarea>
+		            		<!-- <i class='form__validate bx '></i> -->
+		            		<p class="form__error">El mensaje debe contener al menos 20 letras</p>
+		            		<div id="contador">0/300</div>
+		            	    </div>
+		                </div>
+		                <div class="campos__vacios" id="campos__vacios">
+		        	    <p><i <i class='bx bxs-error bx-tada' id="icono__advert"></i> Debes llenar todos los campos</p>
+		                </div>
+		    	        <button class="button-enviar" type="submit" value="Enviar">Enviar</button>
+	                 </form>
+                    </div>
+                </div>
+            </div>
+        <!-- Fin ventana modal -->
+        <main class="l-main">
+
+            <!--========== Inicio ==========-->
+            <section class="inicio" id="inicio">
+                <div class="inicio__container bd-container bd-grid">
+                    <div class="inicio__data">
+                        <h1 class="inicio__title">Roberto Betancourth</h1>
+                        <h2 class="inicio__subtitle">Estudiante de Ingeniería en Sistemas</h2>
+                        <h2 class="unah">UNAH</h2>
+                        <!-- Este boton lo utilizare despues para poner mi corrículum pero todavia no lo tengo terminado -->
+                        <!-- <a href="#" class="button">Currículum</a> -->
+                    </div>
+                    
+                 <lottie-player class="inicio__img" src="../static/json/perfil.json"  background="transparent"  speed="0.5" loop autoplay></lottie-player>
+                    <!-- <img src="../static/img/perfil.png" alt="" class="inicio__img"> -->
+                </div>
+            </section>
+            
+            <!--========== Presentación ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <span class="section-subtitle about__initial">Hola :) este proyecto todavía sigue en desarrollo</span>
+                        <h2 class="section-title about__initial">Me da mucho gusto que estes viendo mi portafolio</h2>
+                        <p class="about__description">Me gusta mucho todo lo que tiene que ver con la tecnología y el universo, en este proyecto trato de combinar ambos. </p>
+                        <a href="#" class="button">Más sobre mi</a>
+                    </div>
+                    <lottie-player class="about__img" src="../static/json/space4.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+                   <!--  <img src="../static/img/ventana1.png" class="about__img" > -->
+                    
+                </div>
+            </section>
+
+            <!--========== Sección de Habilidades ==========-->
+            <section class="habilidades section bd-container" id="habilidades">
+                <span class="section-subtitle"></span>
+                <h2 class="section-title">Habilidades</h2>
+
+                <div class="habilidades__container  bd-grid">
+                    <div class="habilidades__content">
+                        <svg class="habilidades__img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path><path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"></path></svg>
+                        <h3 class="habilidades__title">Proactivo</h3>
+                        <p class="habilidades__description">Siempre me ha gustado buscar formas diferentes de aprender algo.</p>
+                    </div>
+
+                    <div class="habilidades__content">
+                        <svg class="habilidades__img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.604,11.048c0.604-1.029,0.872-2.228,0.751-3.44c-0.179-1.784-1.175-3.361-2.803-4.44l-1.105,1.666 c1.119,0.742,1.8,1.799,1.918,2.974c0.11,1.105-0.28,2.194-1.072,2.986l-1.192,1.192l1.618,0.475C18.951,13.701,19,17.957,19,18h2 C21,16.211,20.044,12.715,16.604,11.048z"></path><path d="M9.5 12c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4S7.294 12 9.5 12zM9.5 6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2S8.397 6 9.5 6zM11 13H8c-3.309 0-6 2.691-6 6v1h2v-1c0-2.206 1.794-4 4-4h3c2.206 0 4 1.794 4 4v1h2v-1C17 15.691 14.309 13 11 13z"></path></svg>
+                        <h3 class="habilidades__title">Trabajo en equipo</h3>
+                        <p class="habilidades__description">Uno de los pilares más importes a la hora de trabajar en un proyecto es tener una buena comunicación con nuestros compañeros.</p>
+                    </div>
+
+                    <div class="habilidades__content">
+                        <svg class="habilidades__img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 20H15V22H9zM16.906 13.712C17.936 12.506 19 11.259 19 9c0-3.859-3.141-7-7-7S5 5.141 5 9c0 2.285 1.067 3.528 2.101 4.73.358.418.729.851 1.084 1.349.144.206.38.996.591 1.921H8v2h1.162 5.675H16v-2h-.774c.213-.927.45-1.719.593-1.925C16.171 14.572 16.545 14.135 16.906 13.712zM14.182 13.925C13.748 14.542 13.386 16 13.176 17h-2.351c-.209-1.002-.572-2.463-1.011-3.08-.407-.572-.826-1.061-1.196-1.492C7.644 11.294 7 10.544 7 9c0-2.757 2.243-5 5-5s5 2.243 5 5c0 1.521-.643 2.274-1.615 3.413C15.012 12.851 14.589 13.346 14.182 13.925z"></path></svg>
+                        <h3 class="habilidades__title">Decisiones</h3>
+                        <p class="habilidades__description">Capacidad de tomar decisiones para obtener los resultados esperados.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== Sección de Conocimientos ==========-->
+            <section class="conocimientos section bd-container" id="conocimientos">
+                <span class="section-subtitle">Aun falta mucho por aprender...</span>
+                <h2 class="section-title">Tecnologías Utilizadas</h2>
+
+                <div class="conocimientos__container bd-grid">
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/postgresql-icon.svg" alt="">
+                        <h3 class="conocimientos__name">PostgreSQL</h3>
+                        <a href="http://formularioamigodecarlos.herokuapp.com/usuarios/" class="conocimientos__button">Ejemplo</a>
+                    </div>
+
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/springio-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Spring Boot</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/djangoproject-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Django</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/oracle-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Oracle DataBase</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/javascript-icon.svg" alt="">
+                        <h3 class="conocimientos__name">JavaScript</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/sqlserver-icon2.svg" alt="">
+                        <h3 class="conocimientos__name">SQL Server</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/python-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Python</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/linux-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Linux</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/java-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Java</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/docker-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Docker</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/illustrator.svg" alt="">
+                        <h3 class="conocimientos__name">Illustrator</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/adobe-affter.svg" alt="">
+                        <h3 class="conocimientos__name">After Effects</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/photoshop.svg" alt="">
+                        <h3 class="conocimientos__name">Photoshop</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+
+                </div>
+            </section>
+
+ 
+            <!--========== Sección de Contacto ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                <img src="../static/img/ventana1.png" alt="" class="inicio__img">
+                <div class="contact__data">
+                    <span class="section-subtitle contact__initial">Aquí podes</span>
+                    <h2 class="section-title contact__initial">Contáctarme</h2>
+                    <p class="contact__description">Generalmente respondo dentro de 3 días hábiles.</p>
+                    <lottie-player class="flecha__contact" src="../static/json/flecha.json"  background="transparent"  speed="0.7"  loop autoplay></lottie-player>
+                </div>
+                <div class="contact__button">
+                    <a class="button cta">Contáctame ahora</a>
+                </div>
+                </div>
+            </section>
+        </main>
+
+        <!--========== Información de Contacto ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">Mis Redes Sociales</a>
+                    <div>
+                        <a href="https://www.facebook.com/paponojodas69" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="https://www.instagram.com/saturno.g9/" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        
+                    </div>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Información</h3>
+                    <ul>
+                        <li>Tegucigalpa - Honduras</li>
+                        <li>Roberto Betancourth</li>
+                        <li>3241-0266</li>
+                        <li>robertobetancourth96@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2021. Todos los derechos reservados.</p>
+        </footer>
+
+
+
+
+{% endblock %}
+
+{% block contentScript %}
+        <script src="{% static 'js/form.js' %}"></script>
+{% endblock %}
+
+
