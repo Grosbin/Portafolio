@@ -1,0 +1,86 @@
+            <!--========== Sección de Conocimientos ==========-->
+            <section class="conocimientos section bd-container" id="conocimientos">
+                <span class="section-subtitle">Aun falta mucho por aprender...</span>
+                <h2 class="section-title">Tecnologías Utilizadas</h2>
+
+                <div class="conocimientos__container bd-grid">
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/ureview.png" alt="">
+                        <!-- <h3 class="conocimientos__name">PostgreSQL</h3> -->
+
+                        <div>
+                            <a href="https://ureview-unah.vercel.app/" class="conocimientos__button">
+                                <i class='bx bxl-github bx-tada-hover' style="font-size: x-large;" ></i>
+                            </a>
+                            <a href="" class="conocimientos__button">
+                                <i class='bx bxs-window-alt bx-tada-hover' style="font-size: x-large;"></i>
+                            </a>
+                            <a href="" class="conocimientos__button">Node.js</a>
+                        </div>
+                    </div>
+
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/springio-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Spring Boot</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/djangoproject-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Django</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/oracle-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Oracle DataBase</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/javascript-icon.svg" alt="">
+                        <h3 class="conocimientos__name">JavaScript</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/sqlserver-icon2.svg" alt="">
+                        <h3 class="conocimientos__name">SQL Server</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/python-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Python</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/linux-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Linux</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/java-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Java</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/docker-icon.svg" alt="">
+                        <h3 class="conocimientos__name">Docker</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/illustrator.svg" alt="">
+                        <h3 class="conocimientos__name">Illustrator</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/adobe-affter.svg" alt="">
+                        <h3 class="conocimientos__name">After Effects</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+                    <div class="conocimientos__content">
+                        <img class="conocimientos__img" src="../static/img/photoshop.svg" alt="">
+                        <h3 class="conocimientos__name">Photoshop</h3>
+                        <a href="#" class="conocimientos__button">Próximamente</a>
+                    </div>
+
+                </div>
+            </section>

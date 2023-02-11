@@ -78,19 +78,19 @@ const selectedTheme = localStorage.getItem("selected-theme");
 // Obtenemos el tema actual que tiene la interfaz validando la clase dark-theme
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? "light" : "dark";
- 
-  // Cambiamos de tema
 
-  const btn = document.querySelector('#switch');
-  const sol = document.querySelector('#icono__sol');
-  const luna = document.querySelector('#icono__luna');
-  
-  btn.addEventListener('click', () =>{
-    btn.classList.toggle('active__mode');
-    sol.classList.toggle('sol__oculto');
-    document.body.classList.toggle(darkTheme);
-    localStorage.setItem("selected-theme", getCurrentTheme());
-  });
+// Cambiamos de tema
+
+const btn = document.querySelector('#switch');
+const sol = document.querySelector('#icono__sol');
+const luna = document.querySelector('#icono__luna');
+
+btn.addEventListener('click', () => {
+  btn.classList.toggle('active__mode');
+  sol.classList.toggle('sol__oculto');
+  document.body.classList.toggle(darkTheme);
+  localStorage.setItem("selected-theme", getCurrentTheme());
+});
 
 // Validamos si el usuario eligió previamente un tema
 if (selectedTheme) {
@@ -100,7 +100,7 @@ if (selectedTheme) {
   );
   btn.classList[selectedTheme === "light" ? "add" : "remove"]('active__mode');
   sol.classList[selectedTheme === "light" ? "add" : "remove"]('sol__oculto');
-  
+
 }
 
 // // Activar / desactivar el tema manualmente con el botón
@@ -116,25 +116,25 @@ if (selectedTheme) {
 
 
 /*==================== Scroll animación ====================*/
-	const sr = ScrollReveal({
-		origin: "top",
-		distance: "30px",
-		duration: 2000,
-		reset: true,
-		});
-		
-		sr.reveal(
-		`.inicio__data, .inicio__img,
+const sr = ScrollReveal({
+  origin: "top",
+  distance: "30px",
+  duration: 2000,
+  reset: true,
+});
+
+sr.reveal(
+  `.inicio__data, .inicio__img,
 			  .about__data, .about__img,
 			  .habilidades__content,
 			  .conocimientos__content,
 			  .contact__data, 
 			  .footer__content`,
-		{
-		  interval: 200,
-      mobile: false
-		}
-		);
+  {
+    interval: 200,
+    mobile: false
+  }
+);
 
 /** Ventana modal */
 let cerrar = document.querySelectorAll(".close")[0];
