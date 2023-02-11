@@ -982,9 +982,6 @@ h1 .texto__encima {
 
 /* Proyectos */
 
-#projects {
-  /* padding: 10rem 0; */
-}
 #projects .item {
   display: flex;
   align-items: center;
