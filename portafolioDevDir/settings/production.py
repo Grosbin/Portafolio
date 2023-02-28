@@ -8,6 +8,7 @@ ALLOWED_HOSTS = ['robertobetancourth.up.railway.app']
 
 STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles/')
 
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
