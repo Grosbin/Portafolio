@@ -1,6 +1,0 @@
-# railway.yml
-
-build_script: python manage.py collectstatic --no-input
-
-services:
-  web: python manage.py runserver 0.0.0.0:$PORT

@@ -6,7 +6,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['robertobetancourth.up.railway.app']
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles/')
+# STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles/')
 
 
 # Database
