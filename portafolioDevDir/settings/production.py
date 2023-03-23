@@ -4,7 +4,7 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['robertobetancourth.up.railway.app']
+ALLOWED_HOSTS = ['robertobetancourth.up.railway.app', 'robertobetancourth.azurewebsites.net']
 
 # STATIC_ROOT = os.path.join(BASE_DIR, '/staticfiles/')
 
